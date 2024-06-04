@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prodigy InfoTech - Interactive Navigation Menu</title>
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f4f7; 
+        }
+
+        
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #f8f9fa;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px; 
+        }
+
+        
+        .logo-container .company-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #007bff; 
+        }
+
+       
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        
+        nav ul li a:hover {
+            background-color: #007bff; 
+            color: #fff; 
+        }
+
+        
+        nav ul li a.active {
+            color: #007bff; 
+            font-weight: bold;
+            border-bottom: 2px solid #007bff; 
+        }
+
+        
+        nav.scrolled {
+            background-color: #343a40; 
+        }
+
+        
+        section {
+            padding: 80px 20px;
+            display: none; 
+        }
+
+       
+        #home {
+            display: block;
+        }
+
+        
+        #home, #about, #services, #contact, #feedback {
+            background-color: rgb(157, 242, 242); 
+        }
+
+        
+        .feedback-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .rating {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .rating span {
+            cursor: pointer;
+        }
+
+        .text-box {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <nav id="navbar">
+        
+        <div class="logo-container">
+            <img src="https://media.licdn.com/dms/image/D4D0BAQFTpfRDuChAOQ/company-logo_200_200/0/1680453080726?e=2147483647&v=beta&t=vaGLjlUuvaXmURB3za9CcF_4UlrSsUrcxOnw5CiNF4U" alt="Prodigy InfoTech Logo">
+            <span class="company-name">Prodigy InfoTech</span>
+        </div>
+
+        
+        <ul>
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">Services</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <li><a href="#feedback" class="nav-link">Feedback</a></li>
+        </ul>
+    </nav>
+
+    
+    <section id="home">
+        <h1>Welcome to Prodigy InfoTech!</h1>
+        <p>Prodigy InfoTech is your trusted partner in technology and innovation. We specialize in providing top-notch technology solutions to businesses of all sizes.</p>
+    </section>
+
+    <section id="about">
+        <h1>About Us</h1>
+        <p>Prodigy InfoTech has a mission to deliver world-class technology services to our clients. With a team of skilled professionals, we bring innovation and excellence to every project.</p>
+    </section>
+
+    <section id="services">
+        <h1>Our Services</h1>
+        <p>We offer a wide range of services, including software development, web design, mobile app development, cloud solutions, and more. Let us help you take your business to the next level.</p>
+    </section>
+
+    <section id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or inquiries, feel free to get in touch with us through our website or give us a call. We're here to help you succeed.</p>
+    </section>
+
+    <section id="feedback">
+        <h1>We Value Your Feedback</h1>
+        <p>At Prodigy InfoTech, we are committed to providing the best possible experience for our users. Your feedback is invaluable to us as it helps us improve our products and services. Please take a moment to share your thoughts with us.</p>
+        <div class="feedback-container">
+            <h2>Feedback Form</h2>
+            <form>
+                <label for="rating">How Would You Rate Your Experience?</label>
+                <div id="rating" class="rating">
+                    <span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span><span>⭐</span>
+                </div>
+
+                <label for="like">What Did You Like the Most?</label>
+                <textarea id="like" class="text-box" rows="4" placeholder="Tell us what you enjoyed the most about our website or service."></textarea>
+
+                <label for="improve">What Can We Improve?</label>
+                <textarea id="improve" class="text-box" rows="4" placeholder="We are always looking to improve. Please let us know if there is anything we could do better."></textarea>
+
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" class="text-box" rows="4" placeholder="If you have any other comments, suggestions, or questions, please share them below."></textarea>
+
+                <h3>Contact Information (Optional)</h3>
+                <input type="text" class="text-box" placeholder="Name">
+                <input type="email" class="text-box" placeholder="Email">
+                <input type="tel" class="text-box" placeholder="Phone Number">
+
+                <p>We respect your privacy. All feedback is confidential and will only be used to improve our services.</p>
+
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+    <script>
+      
+const navbar = document.getElementById("navbar");
+const navLinks = document.querySelectorAll(".nav-link");
+const sections = document.querySelectorAll("section");
+
+
+function handleClick(event) {
+    event.preventDefault(); 
+    navLinks.forEach(link => link.classList.remove("active"));
+    sections.forEach(section => section.style.display = "none");
+
+    
+    const clickedLink = event.target;
+    const targetSection = document.querySelector(clickedLink.getAttribute("href"));
+
+    
+    clickedLink.classList.add("active");
+    targetSection.style.display = "block";
+
+    
+    window.scrollTo({
+        top: targetSection.offsetTop - navbar.offsetHeight,
+        behavior: "smooth"
+    });
+}
+
+navLinks.forEach(link => link.addEventListener("click", handleClick));
+
+function handleScroll() {
+    
+    if (window.scrollY > 100) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+}
+
+window.addEventListener("scroll", handleScroll);
+
+</script>
